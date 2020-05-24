@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  docker-drf-demo:
+    build:
+      context: .
+    image: docker-drf-demo
+    container_name: docker-drf-demo
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./:/project"
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
