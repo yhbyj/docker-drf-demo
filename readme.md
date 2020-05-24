@@ -11,4 +11,8 @@ docker-compose.yml
 docker-compose build
 docker-compose run docker-drf-demo sh -c "django-admin startproject demo ."
 ```
-### 
+### flake8 and Travis-CI
+```text
+.flake8
+.travis.yml
+```
