@@ -1,4 +1,4 @@
-## docker-drf-demo
+## TDD docker-drf-demo
 参考：[londonappdeveloper](https://www.londonappdeveloper.com/product/build-a-backend-rest-api-with-python-django-advanced/)
 环境：windows 10 + docker desktop
 ### docker  djangorestframework demo
@@ -15,4 +15,11 @@ docker-compose run docker-drf-demo sh -c "django-admin startproject demo ."
 ```text
 .flake8
 .travis.yml
+```
+### TDD: admin 
+```commandline
+docker-compose run docker-drf-demo sh -c "python manage.py startapp core"
+docker-compose run docker-drf-demo sh -c "python manage.py test && flake8"
+docker-compose run docker-drf-demo sh -c "python manage.py makemigrations core"
+docker-compose run docker-drf-demo sh -c "python manage.py migrate core"
 ```
