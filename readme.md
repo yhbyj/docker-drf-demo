@@ -32,3 +32,7 @@ docker-compose.yml
 ```commandline
 docker-compose run docker-drf-demo sh -c "python manage.py createsuperuser"
 ```
+### user app
+```commandline
+docker-compose run docker-drf-demo sh -c "python manage.py startapp user"
+```
