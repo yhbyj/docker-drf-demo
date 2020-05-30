@@ -32,7 +32,21 @@ docker-compose.yml
 ```commandline
 docker-compose run docker-drf-demo sh -c "python manage.py createsuperuser"
 ```
-### user app
+### user & recipe app
 ```commandline
 docker-compose run docker-drf-demo sh -c "python manage.py startapp user"
+docker-compose run docker-drf-demo sh -c "python manage.py startapp recipe"
+docker-compose run docker-drf-demo sh -c "python manage.py makemigrations core"
+```
+### run
+```text
+docker-compose down
+docker-compose build
+docker-compose up
+http://127.0.0.1:8000/api/user/create
+http://127.0.0.1:8000/api/user/token
+firefox ModHeader plugin
+'Authorization': 'token 6c628e71b5fb235ab2c1f6f7bbac315eb85d9df9'
+http://127.0.0.1:8000/api/recipe/
+http://127.0.0.1:8000/api/recipe/tags/
 ```
