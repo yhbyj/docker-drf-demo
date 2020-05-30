@@ -1,6 +1,16 @@
 ## TDD docker-drf-demo
 参考：[londonappdeveloper](https://www.londonappdeveloper.com/product/build-a-backend-rest-api-with-python-django-advanced/)
 环境：windows 10 + docker desktop
+```text
+Build a Backend API with Django REST Framework - Advanced
+We covered:
+    - Setting up a project using Docker
+    - Configuring Travis CI
+    - Adding endpoints for creating and mananging users, tags, ingredients and recipes
+    - Adding filtering to our list endpoints
+    - Uploading images
+    - and writing lots of unit tests...
+```
 ### docker  djangorestframework demo
 ```text
 requirements.txt: django(3.0.6), djangorestframework(3.11.0)
