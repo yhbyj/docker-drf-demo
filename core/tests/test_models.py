@@ -2,6 +2,7 @@
 __author__ = 'Yang Haibo'
 __date__ = '2020/5/25 7:26'
 
+from unittest.mock import patch
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 
@@ -88,3 +89,13 @@ class ModelTests(TestCase):
         )
 
         self.assertEqual(str(recipe), recipe.title)
+
+    @patch('uuid.uuid4')
+    def test_recipe_image_field(self, mock_uuid):
+        """Test that images are saved in the correct location"""
+        uuid = 'test-uuid'
+        mock_uuid.return_value = uuid
+        file_path = models.recipe_image_file_path(None, 'myimage.jpg')
+
+        exp_path = f'uploads/recipe/{uuid}.jpg'
+        self.assertEqual(file_path, exp_path)
